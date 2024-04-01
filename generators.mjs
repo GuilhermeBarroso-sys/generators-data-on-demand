@@ -45,5 +45,6 @@ async function * sendToServer() {
 // send to client
 for await (const data of sendToServer()) {
   const getRows = await axios.get('http://localhost:3000/getRows')
-  // console.log(getRows.data[getRows.data.length - 1])
+  console.log(getRows.data[getRows.data.length - 1])
+  // data coming on demand
 }
